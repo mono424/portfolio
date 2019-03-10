@@ -1,33 +1,149 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background:	#343d46;
   color: white;
+  font-family: 'Inconsolata', monospace;
+  overflow-x: hidden;
+  padding-bottom: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 42px;
+  background: black;
+  padding: 10px 12px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
+b {
+  color: rgb(50, 226, 217);
+  font-weight: 700;
+}
+
+a, a:visited {
+  color: rgb(50, 226, 217);
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 7px;
+  border-bottom: 2px solid rgb(50, 226, 217);
+}
+
+a:hover {
+  color: rgb(0, 255, 242);
+  border-bottom: 2px solid rgb(0, 255, 242);
+}
+
+a:active {
+  color: rgb(25, 151, 145);
+  border-bottom: 2px solid rgb(25, 151, 145);
+}
+
+h1 b {
+  color: rgb(50, 226, 217);
+  font-weight: 400;
+}
+
+.section {
+  position: relative;
+  margin: 10vh 5vw;
+  width: 90vw;
+  height: 120vh;
+}
+
+.section h1 {
+  position: absolute;
+  top: 60vh;
+  left: 10px;
+  margin: 0;
+  z-index: 2;
+  margin-right: 100px;
+}
+
+.section .text {
+  position: absolute;
+  top: 70vh;
+  left: 70px;
+  right: 50px;
+  bottom: 0;
+  font-size: 32px;
+  line-height: 2.4;
+}
+
+.section .img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 120px;
+  bottom: 40vh;
+  right:0;
+  background-size: cover;
+  background-position: center top;
+  /* border-radius: 5px; */
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+  filter: grayscale(90%);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:	#343d46;
+  z-index: 99;
+  text-align: center;
+  cursor: default;
+}
+
+.preloader-char {
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 89px);
+  right: 0;
+  margin: 0;
+  font-size: 128px;
+  width: 128px;
+  height: 128px;
+  padding: 25px 20px 25px 30px;
+  border: 2px solid rgb(50, 226, 217);
+  font-weight: bold;
+  color: white;
+  text-shadow: -6px 0 0 rgb(50, 226, 217);
+}
+
+.preloader-char {
+  animation: spin 2s linear infinite;
+}
+
+.preloader.done {
+  animation: fadeOut 0.4s linear forwards;
+}
+
+@keyframes fadeOut {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
+    transform: scale(1);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate3d(1, 1, 1, 0) scale(1);
+  }
+  20% {
+    transform: rotate3d(1, 1, 1, 100deg) scale(0.9);
+  }
+  40% {
+    transform: rotate3d(1, 1, 1, 360deg) scale(1.4);
+  }
+  60% {
+    transform: rotate3d(1, 1, 1, 360deg) scale(1.4);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 0) scale(1);
   }
 }
