@@ -96,6 +96,7 @@ h1 b {
 }
 
 .preloader-char {
+  line-height: 1;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 100px);
