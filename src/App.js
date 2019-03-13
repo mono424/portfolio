@@ -4,7 +4,7 @@ import Preloader from './components/Preloader';
 import Section from './components/Section';
 import Imprint from './components/Imprint';
 import sections from './sections';
-import './App.scss';
+import './App.css';
 
 
 class App extends Component {

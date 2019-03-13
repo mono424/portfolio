@@ -1,18 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
-$break: 1000px;
-
 body {
-  background:	#343d46;
+  background: #343d46;
   color: white;
   font-family: 'Inconsolata', monospace;
   overflow-x: hidden;
   margin: 0;
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  body {
     margin: 14px;
   }
 }
-
 .imprint {
   position: fixed;
   padding: 20px;
@@ -24,25 +21,21 @@ body {
   z-index: 3;
   overflow-y: scroll;
   display: none;
-
-  &.visible {
-    display: block;
-  }
-
-  .top-bar {
-    text-align: center;
-  }
 }
-
+.imprint.visible {
+  display: block;
+}
+.imprint .top-bar {
+  text-align: center;
+}
 .footer {
   margin-top: 200px;
   padding: 20px 0;
   text-align: center;
-  p {
-    margin: 25px 0 0 0;
-  }
 }
-
+.footer p {
+  margin: 25px 0 0 0;
+}
 .root {
   position: fixed;
   top: 0;
@@ -50,68 +43,60 @@ body {
   left: 0;
   right: 0;
 }
-
 h1 {
   font-size: 42px;
   background: black;
   padding: 10px 12px;
   text-transform: uppercase;
-
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  h1 {
     font-size: 24px;
   }
 }
-
 b {
-  color: rgb(50, 226, 217);
+  color: #32e2d9;
   font-weight: 700;
 }
-
 a, a:visited {
   cursor: pointer;
-  color: rgb(50, 226, 217);
+  color: #32e2d9;
   font-weight: 700;
   text-decoration: none;
   padding-bottom: 7px;
-  border-bottom: 2px solid rgb(50, 226, 217);
+  border-bottom: 2px solid #32e2d9;
 }
-
 a:hover {
-  color: rgb(0, 255, 242);
-  border-bottom-color: rgb(0, 255, 242);
+  color: #00fff2;
+  border-bottom-color: #00fff2;
 }
-
 a:active {
-  color: rgb(25, 151, 145);
-  border-bottom-color: rgb(25, 151, 145);
+  color: #199791;
+  border-bottom-color: #199791;
 }
-
-
 h1 b {
-  color: rgb(50, 226, 217);
+  color: #32e2d9;
   font-weight: 400;
 }
-
 .icon-link {
   border-bottom: none;
   display: inline-block;
   margin: 0 10px;
 }
-
 .section {
   position: relative;
   margin: 10vh 5vw;
   width: 90vw;
   height: 120vh;
-
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  .section {
     position: relative;
     margin: 0;
     width: 100%;
     height: 140vh;
   }
 }
-
 .section h1 {
   position: absolute;
   top: 60vh;
@@ -119,14 +104,14 @@ h1 b {
   margin: 0;
   z-index: 2;
   margin-right: 100px;
-
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  .section h1 {
     top: 45vh;
     left: 5px;
     margin-right: 20px;
   }
 }
-
 .section .text {
   position: absolute;
   top: 70vh;
@@ -135,8 +120,9 @@ h1 b {
   bottom: 0;
   font-size: 32px;
   line-height: 2.4;
-
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  .section .text {
     left: 20px;
     right: 20px;
     top: 60vh;
@@ -144,21 +130,19 @@ h1 b {
     line-height: 1.8;
   }
 }
-
 .section .img {
   position: absolute;
   z-index: 1 !important;
   top: 0;
   left: 120px;
   bottom: 40vh;
-  right:0;
+  right: 0;
   background-size: cover;
   background-position: center top;
-  /* border-radius: 5px; */
-  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   filter: grayscale(90%);
-
-  @media screen and (max-width: $break) {
+}
+@media screen and (max-width: 1000px) {
+  .section .img {
     position: relative;
     left: 0;
     bottom: 0;
@@ -167,19 +151,17 @@ h1 b {
     height: 52vh;
   }
 }
-
 .preloader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:	#343d46;
+  background-color: #343d46;
   z-index: 99;
   text-align: center;
   cursor: default;
 }
-
 .preloader-char {
   line-height: 1;
   border-radius: 50%;
@@ -192,20 +174,17 @@ h1 b {
   width: 128px;
   height: 128px;
   padding: 25px 20px 25px 30px;
-  border: 2px solid rgb(50, 226, 217);
+  border: 2px solid #32e2d9;
   font-weight: bold;
   color: white;
-  text-shadow: -6px 0 0 rgb(50, 226, 217);
+  text-shadow: -6px 0 0 #32e2d9;
 }
-
 .preloader-char {
   animation: spin 2s linear infinite;
 }
-
 .preloader.done {
   animation: fadeOut 0.4s linear forwards;
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
