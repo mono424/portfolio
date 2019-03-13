@@ -1,11 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
+$break: 1000px;
+
 body {
   background:	#343d46;
   color: white;
   font-family: 'Inconsolata', monospace;
   overflow-x: hidden;
-  padding-bottom: 200px;
+  margin: 0;
+  @media screen and (max-width: $break) {
+    margin: 14px;
+  }
+}
+
+.imprint {
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1e2225;
+  z-index: 3;
+  overflow-y: scroll;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  .top-bar {
+    text-align: center;
+  }
+}
+
+.footer {
+  margin-top: 200px;
+  padding: 20px 0;
+  text-align: center;
+  p {
+    margin: 25px 0 0 0;
+  }
+}
+
+.root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 h1 {
@@ -13,6 +56,10 @@ h1 {
   background: black;
   padding: 10px 12px;
   text-transform: uppercase;
+
+  @media screen and (max-width: $break) {
+    font-size: 24px;
+  }
 }
 
 b {
@@ -21,6 +68,7 @@ b {
 }
 
 a, a:visited {
+  cursor: pointer;
   color: rgb(50, 226, 217);
   font-weight: 700;
   text-decoration: none;
@@ -30,17 +78,24 @@ a, a:visited {
 
 a:hover {
   color: rgb(0, 255, 242);
-  border-bottom: 2px solid rgb(0, 255, 242);
+  border-bottom-color: rgb(0, 255, 242);
 }
 
 a:active {
   color: rgb(25, 151, 145);
-  border-bottom: 2px solid rgb(25, 151, 145);
+  border-bottom-color: rgb(25, 151, 145);
 }
+
 
 h1 b {
   color: rgb(50, 226, 217);
   font-weight: 400;
+}
+
+.icon-link {
+  border-bottom: none;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .section {
@@ -48,6 +103,13 @@ h1 b {
   margin: 10vh 5vw;
   width: 90vw;
   height: 120vh;
+
+  @media screen and (max-width: $break) {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 140vh;
+  }
 }
 
 .section h1 {
@@ -57,6 +119,12 @@ h1 b {
   margin: 0;
   z-index: 2;
   margin-right: 100px;
+
+  @media screen and (max-width: $break) {
+    top: 45vh;
+    left: 5px;
+    margin-right: 20px;
+  }
 }
 
 .section .text {
@@ -67,11 +135,19 @@ h1 b {
   bottom: 0;
   font-size: 32px;
   line-height: 2.4;
+
+  @media screen and (max-width: $break) {
+    left: 20px;
+    right: 20px;
+    top: 60vh;
+    font-size: 24px;
+    line-height: 1.8;
+  }
 }
 
 .section .img {
   position: absolute;
-  z-index: 1;
+  z-index: 1 !important;
   top: 0;
   left: 120px;
   bottom: 40vh;
@@ -81,6 +157,15 @@ h1 b {
   /* border-radius: 5px; */
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   filter: grayscale(90%);
+
+  @media screen and (max-width: $break) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 52vh;
+  }
 }
 
 .preloader {

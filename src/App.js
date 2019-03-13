@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import Controller from './components/scroll-magic/Controller';
 import Preloader from './components/Preloader';
 import Section from './components/Section';
+import Imprint from './components/Imprint';
 import sections from './sections';
-import './App.css';
+import './App.scss';
 
 
 class App extends Component {
 
   state = {
     loaded: false,
-    loadedProgress: 0
+    loadedProgress: 0,
+    imprintVisible: false
   }
 
   componentDidMount() {
@@ -27,13 +29,18 @@ class App extends Component {
   }
 
   render() {
-    const { loaded, loadedProgress } = this.state;
+    const { loaded, loadedProgress, imprintVisible } = this.state;
     return (
       <div className="App">
         <Preloader visible={!loaded} progress={loadedProgress} />
         <Controller>
           {sections.map((props, i) => <Section key={i} {...props} />)}
         </Controller>
+        <div className="footer">
+          <a onClick={() => { this.setState({ imprintVisible: true })}}>Impressum 🙇‍</a>
+          <p>👮 Copyright 2019 Khadim Fall </p>
+        </div>
+        <Imprint visible={imprintVisible} onClose={() => { this.setState({ imprintVisible: false }) }} />
       </div>
     );
   }
