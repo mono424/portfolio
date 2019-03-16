@@ -2,6 +2,7 @@ import React from 'react';
 
 export default [
   {
+    mobileHeight: 800,
     img: "/img/halfpipe.jpg",
     title: (
       <React.Fragment>
@@ -21,6 +22,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 900,
     img: "/img/senegal.jpg",
     title: (
       <React.Fragment>
@@ -36,6 +38,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 1000,
     img: "/img/street.jpg",
     title: (
       <React.Fragment>
@@ -51,6 +54,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 1000,
     img: "/img/book.jpg",
     title: (
       <React.Fragment>
@@ -66,6 +70,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 1100,
     img: "/img/construct.jpg",
     title: (
       <React.Fragment>
@@ -81,6 +86,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 900,
     img: "/img/car.jpg",
     title: (
       <React.Fragment>
@@ -94,6 +100,7 @@ export default [
     ),
   },
   {
+    mobileHeight: 600,
     img: "/img/smile.jpg",
     title: (
       <React.Fragment>

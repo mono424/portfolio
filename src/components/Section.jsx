@@ -19,9 +19,9 @@ class Section extends Component {
 
   render() {
     const { mobile } = this.state;
-    let { controller, img, title, text } = this.props; 
+    let { controller, img, title, text, mobileHeight = 900 } = this.props; 
     return (
-      <div className="section">
+      <div className="section" style={ mobile ? { height: mobileHeight } : null }>
         <Scene controller={controller} duration={400} offset={100} triggerHook="onCenter">
           <Timeline>
             <Tween
