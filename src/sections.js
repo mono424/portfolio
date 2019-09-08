@@ -24,6 +24,7 @@ export default [
   {
     mobileHeight: 900,
     img: "/img/senegal.jpg",
+    youtube: "https://www.youtube.com/embed/PNm9YUvYUKg",
     title: (
       <React.Fragment>
         Born and raised in <b>Germany</b> with roots in <b>Senegal</b>
